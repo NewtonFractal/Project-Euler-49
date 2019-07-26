@@ -6,7 +6,7 @@ primelist= []
 def permutationchecker(prime1,prime2,prime3):
     permutationlist = set(list(prime1)+list(prime2)+list(prime3))
     if len(permutationlist) <= 4:
-        if int(prime1) > 1487:
+        if int(prime1) != 1487:
             end = time.time()
             print(prime1), print(prime2), print(prime3)
             print(end - start)
