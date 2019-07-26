@@ -30,10 +30,9 @@ def primefinder(number):
         if prime[y] == True:
             for x in range(y**2, number + 1,y+y):
                 prime[x] = False
-    for x in range(y+2,number+1,2):
-        if x > 1000:
-            if prime[x] == True:
-                primelist.append(x)
+    for x in range(1001,number+1,2):
+        if prime[x] == True:
+            primelist.append(x)
 
 primefinder(10000-6660)
 
