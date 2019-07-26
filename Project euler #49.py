@@ -13,16 +13,12 @@ def permutationchecker(prime1,prime2,prime3):
             exit()
 
 def primechecker2(number):
-    if number % 2 == 0:
-        return None
     for x in range(3, int(math.sqrt(number + 1)), 2):
         if number % x == 0:
             return None
     permutationchecker(str(number-6660),str(number-3330),str(number))
 
 def primechecker(number):
-    if number % 2 == 0:
-        return None
     for x in range(3,int(math.sqrt(number+1)),2):
         if number % x == 0:
             return None
@@ -45,6 +41,3 @@ for x in primelist:
     if x +6660 > 10000:
         exit()
     primechecker(x+3330)
-
-end = time.time()
-print(end - start)
