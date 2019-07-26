@@ -38,6 +38,4 @@ def primefinder(number):
 primefinder(10000)
 
 for x in primelist:
-    if x +6660 > 10000:
-        exit()
     primechecker(x+3330)
