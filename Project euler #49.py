@@ -35,7 +35,7 @@ def primefinder(number):
             if prime[x] == True:
                 primelist.append(x)
 
-primefinder(10000-6600)
+primefinder(10000-6660)
 
 for x in primelist:
     primechecker(x+3330)
