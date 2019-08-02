@@ -12,17 +12,11 @@ def permutationchecker(prime1,prime2,prime3):
             print(end - start)
             exit()
 
-def primechecker2(number):
-    for x in range(3, int(math.sqrt(number + 1)), 2):
-        if number % x == 0:
-            return None
-    permutationchecker(str(number-6660),str(number-3330),str(number))
-
 def primechecker(number):
     for x in range(3,int(math.sqrt(number+1)),2):
         if number % x == 0:
-            return None
-    primechecker2(number+3330)
+            return False
+    return True
 
 def primefinder(number):
     prime = [True] * (number+1)
@@ -36,5 +30,12 @@ def primefinder(number):
 
 primefinder(10000-6660)
 
-for x in primelist:
-    primechecker(x+3330)
+def primesearch():
+    for x in primelist:
+       prime = primechecker(x+3330)
+       if prime == True:
+           prime = primechecker(x+6660)
+           if prime == True:
+               permutationchecker(str(x), str(x+3330), str(x+6660))
+
+primesearch()
